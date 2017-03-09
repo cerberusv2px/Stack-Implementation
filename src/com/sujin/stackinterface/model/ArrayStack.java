@@ -31,4 +31,9 @@ public class ArrayStack implements Stack {
         int num = arr[--top];
         return num;
     }
+
+    @Override
+    public int size() {
+        return top;
+    }
 }

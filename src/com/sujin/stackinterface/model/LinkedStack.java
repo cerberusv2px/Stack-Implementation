@@ -15,12 +15,14 @@ public class LinkedStack implements Stack {
     }
 
     private Node top=null;
+    private int counter=0;
 
     @Override
     public void push(int num) throws StackFullException {
         Node n =new Node(num);
         n.next=top;
         top=n;
+        counter++;
     }
 
     @Override
@@ -31,6 +33,12 @@ public class LinkedStack implements Stack {
         Node n =top;
         top=n.next;
         n.next=null;
+        counter--;
         return n.data;
+    }
+
+    @Override
+    public int size() {
+        return counter;
     }
 }

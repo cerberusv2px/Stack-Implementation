@@ -7,4 +7,5 @@ public interface Stack {
 
     public void push(int num) throws StackFullException;
     public int pop() throws StackEmptyException;
+    public int size();
 }
